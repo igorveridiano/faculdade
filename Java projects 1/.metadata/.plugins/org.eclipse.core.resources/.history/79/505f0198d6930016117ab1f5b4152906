@@ -1,0 +1,14 @@
+package Teste;
+
+public class Menu {
+	
+	public boolean AdicionarAnimal(Animal animal){
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

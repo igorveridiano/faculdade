@@ -1,0 +1,18 @@
+1492720533519	Encapsulate field 'size'
+1492720538169	Encapsulate field 'topo'
+1492734308488	Delete element
+1492802532229	Encapsulate field 'size'
+1492817058505	Delete element
+1492817498969	Encapsulate field 'codigo'
+1492817503141	Encapsulate field 'nome'
+1492817508275	Encapsulate field 'quantidadeEstoque'
+1492817512924	Encapsulate field 'custoUnitario'
+1492817601158	Encapsulate field 'data'
+1492817605344	Encapsulate field 'quantidadeComprada'
+1492817609687	Encapsulate field 'valorDaCompra'
+1492817757880	Encapsulate field 'data'
+1492817761526	Encapsulate field 'quantidadeVendida'
+1492817767275	Encapsulate field 'valorDaVenda'
+1492817772300	Encapsulate field 'custoUnitario'
+1492818269744	Convert local variable 'leia' to field
+1492818275454	Convert local variable 'input' to field

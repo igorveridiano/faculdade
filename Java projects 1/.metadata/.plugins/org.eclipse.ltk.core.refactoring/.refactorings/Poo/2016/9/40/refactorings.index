@@ -1,0 +1,11 @@
+1475016019932	Convert local variable 'gravadora' to field
+1475016116211	Encapsulate field 'gravadora'
+1475016220030	Convert local variable 'empresa' to field
+1475016233128	Encapsulate field 'empresa'
+1475186942155	Encapsulate field 'Codigo'
+1475186955866	Encapsulate field 'Nome'
+1475186960175	Encapsulate field 'Estado'
+1475187838483	Encapsulate field 'cidade'
+1475189428650	Delete element
+1475189815040	Encapsulate field 'ListaCidade'
+1475194661887	Convert local variable 'parametro' to field

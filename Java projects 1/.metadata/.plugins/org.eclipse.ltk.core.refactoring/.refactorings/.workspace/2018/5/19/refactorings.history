@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;projetoComSceneBuilder&apos;" deleteContents="false" description="Delete resource &apos;projetoComSceneBuilder&apos;" element1="/projetoComSceneBuilder" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525779997987"/>&#x0A;<refactoring comment="Delete resource &apos;PtojetoComSceneBuilder&apos;" deleteContents="false" description="Delete resource &apos;PtojetoComSceneBuilder&apos;" element1="/PtojetoComSceneBuilder" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525781092745"/>
+</session>

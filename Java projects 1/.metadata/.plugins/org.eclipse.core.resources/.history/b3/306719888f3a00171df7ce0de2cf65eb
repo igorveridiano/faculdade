@@ -1,0 +1,136 @@
+package tabelaHash;
+
+import java.util.Iterator;
+
+import listaSimplismenteEncadeada.ListaSimplesmenteEncadeada;
+import vetorLista.Vetor;
+
+public class TabelaHash<K, V> implements ITabelaHash<K, V> {
+	
+	
+	Vetor<ListaSimplesmenteEncadeada<TabelaHashNo>> vet = new Vetor<>();
+	private int posicao;
+	private int tamanho;
+	
+	private class TabelaHashNo {
+		private K chave;
+		private V valor;
+		
+		private TabelaHashNo (K chave, V valor){
+			this.chave = chave;
+			this.valor = valor;
+		}
+	}
+   
+
+	@Override
+	public Iterator<V> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void inserir(K chave, V valor) {
+		posicao = (chave.hashCode() % vet.getTamanho());
+		try {
+			if (vet.obter(posicao).equals(null)){
+			} else {
+				TabelaHashNo tabelaHashNo = new TabelaHashNo(chave, valor);
+				ListaSimplesmenteEncadeada<TabelaHashNo> lista2;
+				lista2 = vet.obter(posicao);
+				lista2.adicionar(tabelaHashNo);
+				vet.adicionar(posicao, lista2);
+				tamanho++;
+			}
+		} catch (NullPointerException e){
+			TabelaHashNo tabelaHashNo = new TabelaHashNo(chave, valor);
+			ListaSimplesmenteEncadeada<TabelaHashNo> lista1 = new ListaSimplesmenteEncadeada<>();
+			lista1.adicionar(tabelaHashNo);
+			vet.adicionar(posicao, lista1);
+			tamanho++;
+		}
+	}
+
+	@Override
+	public boolean remover(K chave) {
+		posicao = (chave.hashCode() % vet.getTamanho());
+		ListaSimplesmenteEncadeada<TabelaHashNo> lista = new ListaSimplesmenteEncadeada<>();
+		lista = vet.obter(posicao);
+		try {
+			for (TabelaHashNo tabelaHashNo : lista) {
+				if (tabelaHashNo.chave.equals(chave)){
+					lista.remover(tabelaHashNo);
+					vet.adicionar(posicao, lista);
+					tamanho--;
+					return true;
+				} 
+			}
+		} catch (NullPointerException e){
+			return false;
+		}
+		return false;
+	}
+
+	@Override
+	public V buscar(K chave) {
+		posicao = (chave.hashCode() % vet.getTamanho());
+		ListaSimplesmenteEncadeada<TabelaHashNo> lista = new ListaSimplesmenteEncadeada<>();
+		lista = vet.obter(posicao);
+		try {
+			for (TabelaHashNo tabelaHashNo : lista) {
+				if (tabelaHashNo.chave.equals(chave)){
+					return tabelaHashNo.valor;
+				}
+			}
+		} catch (NullPointerException e) {
+			return null;
+		}
+		return null;
+	}
+
+	@Override
+	public boolean contem(V valor) {
+		if (this.tamanho != 0){
+			for (ListaSimplesmenteEncadeada<TabelaHashNo> listaSimplesmenteEncadeada : vet) {
+				if (aux(listaSimplesmenteEncadeada)){
+					for (TabelaHashNo tabelaHashNo : listaSimplesmenteEncadeada) {
+						if (tabelaHashNo.valor.equals(valor)){
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+	
+	private boolean aux(ListaSimplesmenteEncadeada<TabelaHashNo> lista){
+		try {
+			if (lista.tamanho() != 0) {
+				return true;
+			}
+		} catch (NullPointerException e) {
+			return false;
+		}
+		return false;
+	}
+
+	@Override
+	public int tamanho() {
+		return tamanho;
+	}
+
+	@Override
+	public boolean vazio() {
+		if (vet.tamanho() == 0){
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void limpar() {
+		vet.limpar();
+		tamanho = 0;
+	}
+}

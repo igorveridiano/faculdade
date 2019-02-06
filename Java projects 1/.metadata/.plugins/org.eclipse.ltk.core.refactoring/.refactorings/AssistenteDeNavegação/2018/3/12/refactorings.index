@@ -1,0 +1,18 @@
+1521716720360	Delete element
+1521718267612	Delete element
+1521720884032	Rename package 'assistenteDeNavegação'
+1521720899286	Rename type 'Main'
+1521720915364	Rename type 'RegisterTrafficBoard'
+1521722198549	Rename type 'City'
+1521723785931	Delete element
+1521723803945	Delete element
+1521725684544	Infer generic type arguments
+1521725697015	Infer generic type arguments
+1521807422404	Rename type 'ClearData'
+1521807434992	Rename type 'City'
+1521812410358	Rename type 'StartTripView'
+1521813323972	Delete element
+1521890278475	Rename type 'StartTripPart1'
+1521890302711	Rename type 'StartTripPart2'
+1521932349800	Encapsulate field 'currentCity'
+1521932371769	Encapsulate field 'destination'

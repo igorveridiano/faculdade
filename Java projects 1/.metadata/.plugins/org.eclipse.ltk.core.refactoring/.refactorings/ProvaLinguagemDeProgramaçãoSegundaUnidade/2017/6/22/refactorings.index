@@ -1,0 +1,20 @@
+1496415195744	Convert local variable 'leia' to field
+1496415198857	Convert local variable 'input' to field
+1496419668486	Encapsulate field 'imagem'
+1496419986131	Rename type 'Coversor'
+1496420487664	Encapsulate field 'aux'
+1496420794146	Encapsulate field 'aux2'
+1496421045197	Encapsulate field 'largura1'
+1496421049182	Encapsulate field 'altura1'
+1496421053425	Encapsulate field 'largura2'
+1496421060171	Encapsulate field 'altura2'
+1496421064140	Encapsulate field 'largura3'
+1496421068724	Encapsulate field 'altura3'
+1496421072403	Encapsulate field 'largura4'
+1496421076322	Encapsulate field 'altura4'
+1496422333656	Convert local variable 'conversor' to field
+1496440077529	Convert local variable 'thread' to field
+1496456365665	Encapsulate field 'larguraInicio'
+1496456371237	Encapsulate field 'alturaInicio'
+1496456376549	Encapsulate field 'larguraFim'
+1496456381753	Encapsulate field 'alturaFim'

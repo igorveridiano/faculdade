@@ -1,0 +1,22 @@
+package Teste;
+
+public class Animal {
+	
+	private String Nome;
+	private String Familia;
+	private String Especie;
+	private String Sexo;
+	
+	public Animal (String nome, String familia, String especie, String sexo){
+		this.Nome = nome;
+		this.Familia = familia;
+		this.Especie = especie;
+		this.Sexo = sexo;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

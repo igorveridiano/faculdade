@@ -1,0 +1,15 @@
+1493524040805	Encapsulate field 'size'
+1493524070175	Encapsulate field 'fim'
+1493524312747	Encapsulate field 'elemento'
+1493524438947	Encapsulate field 'inicio'
+1493568312765	Encapsulate field 'fim'
+1493568317293	Encapsulate field 'size'
+1493570166751	Encapsulate field 'fim'
+1493570264528	Encapsulate field 'elemento'
+1493570366787	Encapsulate field 'inicio'
+1493581297586	Encapsulate field 'vagas'
+1493581470721	Encapsulate field 'placa'
+1493581474962	Encapsulate field 'numeroDaVaga'
+1493582413938	Encapsulate field 'manobras'
+1493583533256	Convert local variable 'input' to field
+1493583689856	Convert local variable 'leia' to field

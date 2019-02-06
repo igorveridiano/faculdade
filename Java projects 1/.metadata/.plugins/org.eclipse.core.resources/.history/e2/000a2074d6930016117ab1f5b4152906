@@ -1,0 +1,54 @@
+package Teste;
+
+public class Animal {
+	
+	private String Nome;
+	private String Familia;
+	private String Especie;
+	private String Sexo;
+	
+	public Animal (String nome, String familia, String especie, String sexo){
+		this.Nome = nome;
+		this.Familia = familia;
+		this.Especie = especie;
+		this.Sexo = sexo;
+	}
+
+	public String getNome() {
+		return Nome;
+	}
+
+	public void setNome(String nome) {
+		Nome = nome;
+	}
+
+	public String getFamilia() {
+		return Familia;
+	}
+
+	public void setFamilia(String familia) {
+		Familia = familia;
+	}
+
+	public String getEspecie() {
+		return Especie;
+	}
+
+	public void setEspecie(String especie) {
+		Especie = especie;
+	}
+
+	public String getSexo() {
+		return Sexo;
+	}
+
+	public void setSexo(String sexo) {
+		Sexo = sexo;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

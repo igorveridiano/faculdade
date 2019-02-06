@@ -1,0 +1,31 @@
+1495983347198	Infer generic type arguments
+1495984491660	Infer generic type arguments
+1495984511884	Infer generic type arguments
+1495984604326	Infer generic type arguments
+1495984635635	Infer generic type arguments
+1495984717113	Delete element
+1495985015968	Infer generic type arguments
+1495985052751	Infer generic type arguments
+1495985248790	Delete element
+1495986212575	Delete element
+1495986226266	Encapsulate field 'tamanhoInicial'
+1495986314269	Copy package
+1496063606468	Rename type 'LSD'
+1496063638620	Rename type 'IteradorLSD'
+1496064454697	Rename type 'Voos'
+1496064936807	Encapsulate field 'nome'
+1496064943013	Encapsulate field 'cpf'
+1496064947365	Encapsulate field 'telefone'
+1496064952644	Encapsulate field 'email'
+1496065750319	Encapsulate field 'codigo'
+1496065755896	Encapsulate field 'localSaida'
+1496065760004	Encapsulate field 'destino'
+1496065763867	Encapsulate field 'data'
+1496065767872	Encapsulate field 'horaSaida'
+1496065771992	Encapsulate field 'horaChegada'
+1496065777894	Encapsulate field 'tipoVoo'
+1496065831800	Encapsulate field 'listaClientes'
+1496065886495	Encapsulate field 'listaPassageiros'
+1496067953268	Encapsulate field 'vagas'
+1496073031338	Convert local variable 'input' to field
+1496073037595	Convert local variable 'leia' to field

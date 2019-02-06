@@ -1,0 +1,22 @@
+package Teste;
+
+public class Menu {
+	
+	private ArrayList<Animal> ListaAnimal;
+	
+	public Menu(){
+		new ArrayList<Animal>();
+	}
+	
+	public boolean AdicionarAnimal(Animal animal){
+		boolean Animaisiguais = true;
+		
+		return false;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

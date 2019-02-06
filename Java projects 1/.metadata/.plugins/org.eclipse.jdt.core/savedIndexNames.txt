@@ -1,0 +1,26 @@
+INDEX VERSION 1.127+C:\faculdade\Programação Orientada Objeto\exercicios\.metadata\.plugins\org.eclipse.jdt.core
+4022169044.index
+1268482544.index
+3946802284.index
+1120805834.index
+2134680105.index
+4110493642.index
+827979212.index
+1730996464.index
+3821428347.index
+3195339476.index
+2651419270.index
+265533376.index
+3951043087.index
+3660632646.index
+3352853036.index
+33325970.index
+1246040911.index
+611416209.index
+491396018.index
+2876387247.index
+140858283.index
+2072454031.index
+2071972784.index
+2610918748.index
+925842015.index

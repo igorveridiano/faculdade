@@ -1,0 +1,31 @@
+package listaSimplismenteEncadeada;
+
+public class LSE {
+	
+	public static void main(String[] args) {
+		ListaSimplesmenteEncadeada<Integer> lista = new ListaSimplesmenteEncadeada<>();
+		Integer valor = 7;
+		System.out.println(lista);
+		lista.adicionar(6);
+		System.out.println(lista);
+		lista.adicionarNoInicio(1);
+		System.out.println(lista);
+		lista.adicionarNoFim(7);
+		System.out.println(lista);
+		lista.adicionar(1, 5);
+		System.out.println(lista);
+		System.out.println(lista.obter(1));
+		lista.remover(valor);
+		System.out.println(lista);
+		lista.contem(9);
+		lista.adicionar(8);
+		lista.remover(3);
+		System.out.println(lista);
+		System.out.println(lista.tamanho());
+		lista.adicionar(5, 2);
+		System.out.println(lista);
+		lista.limpar();
+		System.out.println(lista);
+		System.out.println(lista.tamanho);
+    }
+}

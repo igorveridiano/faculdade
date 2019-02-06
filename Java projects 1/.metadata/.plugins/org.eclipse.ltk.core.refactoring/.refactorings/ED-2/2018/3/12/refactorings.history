@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 packages to &apos;AssistenteDeNavegação/src&apos;&#x0D;&#x0A;- Original project: &apos;ED-2&apos;&#x0D;&#x0A;- Destination element: &apos;AssistenteDeNavegação/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ED-2/src/fila&#x0D;&#x0A;     ED-2/src/genericTernaryTree&#x0D;&#x0A;     ED-2/src/listaDuplamenteEncadeada" description="Copy packages" destination="=AssistenteDeNavegação/src" element1="/src&lt;fila" element2="/src&lt;genericTernaryTree" element3="/src&lt;listaDuplamenteEncadeada" flags="589830" fragments="3" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1521716564264" version="1.0"/>
+</session>

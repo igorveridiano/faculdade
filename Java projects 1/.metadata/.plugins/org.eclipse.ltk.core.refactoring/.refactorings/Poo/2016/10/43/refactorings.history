@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;Teste.Menu.ListaAnimal&apos; in &apos;Teste.Menu&apos;&#x0D;&#x0A;- Original project: &apos;Poo&apos;&#x0D;&#x0A;- Original element: &apos;Teste.Menu.ListaAnimal&apos;&#x0D;&#x0A;- Getter method name: &apos;getListaAnimal&apos;&#x0D;&#x0A;- Setter method name: &apos;setListaAnimal&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;ListaAnimal&apos;" flags="589830" getter="getListaAnimal" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;Teste{Menu.java[Menu^ListaAnimal" insertion="1" setter="setListaAnimal" stamp="1476646406519" version="1.0" visibility="1"/>
+</session>

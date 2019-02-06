@@ -1,0 +1,7 @@
+1489690702898	Encapsulate field 'codigo'
+1489690714179	Encapsulate field 'numeroMaximoAlunos'
+1489693796839	Convert local variable 'leia' to field
+1489694334907	Encapsulate field 'rg'
+1489694339408	Encapsulate field 'nome'
+1489696560468	Rename type 'Iterator'
+1489698769886	Convert local variable 'input' to field

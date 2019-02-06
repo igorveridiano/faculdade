@@ -1,0 +1,19 @@
+1480630911439	Encapsulate field 'tema'
+1480630917944	Encapsulate field 'codigo'
+1480630922145	Encapsulate field 'custo'
+1480630925634	Encapsulate field 'lancamento'
+1480631017521	Delete element
+1480631233427	Encapsulate field 'custoDaFita'
+1480631237650	Encapsulate field 'marca'
+1480631424238	Delete element
+1480631649306	Encapsulate field 'codigo'
+1480631751765	Encapsulate field 'codigo'
+1480631757649	Encapsulate field 'tema'
+1480631761924	Encapsulate field 'custo'
+1480631766511	Encapsulate field 'lancamento'
+1480632220721	Encapsulate field 'cursos'
+1480632226601	Encapsulate field 'midia1'
+1480632232271	Encapsulate field 'midia2'
+1480632236887	Encapsulate field 'quatidadeExemplar'
+1480633237831	Convert local variable 'leia' to field
+1480635618153	Encapsulate field 'curso'

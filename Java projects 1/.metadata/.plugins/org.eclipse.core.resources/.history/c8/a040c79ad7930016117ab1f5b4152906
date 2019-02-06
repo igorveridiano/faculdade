@@ -1,0 +1,32 @@
+package Teste;
+
+import java.util.ArrayList;
+
+public class Menu {
+	
+	private ArrayList<Animal> ListaAnimal;
+	
+	public Menu(){
+		new ArrayList<Animal>();
+	}
+	
+	public boolean AdicionarAnimal(Animal animal){
+		boolean Animaisiguais = true;
+		
+		return false;
+	}
+
+	public ArrayList<Animal> getListaAnimal() {
+		return ListaAnimal;
+	}
+
+	public void setListaAnimal(ArrayList<Animal> listaAnimal) {
+		ListaAnimal = listaAnimal;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

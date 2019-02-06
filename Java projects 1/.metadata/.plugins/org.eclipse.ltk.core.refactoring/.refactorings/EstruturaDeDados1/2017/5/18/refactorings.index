@@ -1,0 +1,22 @@
+1493654606518	Convert local variable 'leia' to field
+1493654608733	Convert local variable 'input' to field
+1493655033980	Encapsulate field 'nome'
+1493655040271	Encapsulate field 'cpf'
+1493655195660	Encapsulate field 'nome'
+1493655199685	Encapsulate field 'quantidade'
+1493655203693	Encapsulate field 'id'
+1493655207551	Encapsulate field 'preco'
+1493655366352	Encapsulate field 'precoDaCompra'
+1493655404435	Encapsulate field 'precoUnitario'
+1493655998116	Encapsulate field 'cliente'
+1493656236763	Rename type 'Pedidos'
+1493656770681	Encapsulate field 'valorTotalDaCompra'
+1493658262634	Encapsulate field 'quantidadeVendida'
+1493660573135	Encapsulate field 'id'
+1493661033209	Convert local variable 'pedidos' to field
+1493923528390	Rename type 'IterdadorAoContrario'
+1493923549535	Rename type 'IteradadorAoContrario'
+1493924578881	Delete element
+1493924679131	Delete element
+1493924928545	Delete element
+1493924957353	Delete element

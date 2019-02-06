@@ -1,0 +1,11 @@
+1490295667655	Convert local variable 'atual' to field
+1490298190737	Encapsulate field 'nome'
+1490298202829	Encapsulate field 'matricula'
+1490298210777	Encapsulate field 'nome'
+1490298220616	Encapsulate field 'nota1'
+1490298227642	Encapsulate field 'nota2'
+1490299139056	Encapsulate field 'media'
+1490465900899	Rename package 'ed1.lista'
+1490465922079	Rename type 'ED1'
+1490465956682	Copy packages
+1490466005413	Move package

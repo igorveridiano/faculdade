@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;listaDuplamenteEncadeada.LSD&apos; to &apos;LDE&apos;&#x0D;&#x0A;- Original project: &apos;Segunda ME de POO&apos;&#x0D;&#x0A;- Original element: &apos;listaDuplamenteEncadeada.LSD&apos;&#x0D;&#x0A;- Renamed element: &apos;listaDuplamenteEncadeada.LDE&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LSD&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;listaDuplamenteEncadeada{LSD.java[LSD" matchStrategy="1" name="LDE" qualified="false" references="true" similarDeclarations="false" stamp="1496063555656" textual="false" version="1.0"/>
+</session>

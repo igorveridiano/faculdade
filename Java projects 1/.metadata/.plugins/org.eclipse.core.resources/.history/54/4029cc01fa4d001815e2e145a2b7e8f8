@@ -1,0 +1,36 @@
+package graph;
+
+public class ElementoMenorCaminho {
+	
+	private Vertice vertice;
+	private boolean S;
+	private int distancia;
+	private Vertice path;
+	
+	public Vertice getVertice() {
+		return vertice;
+	}
+	public void setVertice(Vertice vertice) {
+		this.vertice = vertice;
+	}
+	public boolean isS() {
+		return S;
+	}
+	public void setS(boolean s) {
+		S = s;
+	}
+	public int getDistancia() {
+		return distancia;
+	}
+	public void setDistancia(int distancia) {
+		this.distancia = distancia;
+	}
+	public Vertice getPath() {
+		return path;
+	}
+	public void setPath(Vertice path) {
+		this.path = path;
+	}
+	
+	
+}

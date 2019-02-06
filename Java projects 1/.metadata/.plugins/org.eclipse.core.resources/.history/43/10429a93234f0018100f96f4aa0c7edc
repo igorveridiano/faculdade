@@ -1,0 +1,276 @@
+package graph;
+
+import graph.interfaces.IGrafo;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
+import java.util.Stack;
+
+public class Grafo implements IGrafo {
+
+	private Set<Vertice> vertices = new HashSet<Vertice>();
+	private Set<Aresta> arestas = new HashSet<Aresta>();
+	private Queue<Vertice> queue = new LinkedList<>();
+	private Stack<Vertice> stack = new Stack<>();
+
+	public Grafo(Set<Vertice> vertices, Set<Aresta> arestas) {
+		this.vertices = vertices;
+		this.arestas = arestas;
+	}
+
+	@Override
+	public Set<Vertice> getAdjacentes(Vertice v) {
+		Set<Vertice> adjacentes = new HashSet<Vertice>();
+
+		for (Aresta aresta : this.arestas) {
+			if (aresta.getA() == v) {
+				adjacentes.add(aresta.getB());
+			}
+
+			if (aresta.getB() == v) {
+				adjacentes.add(aresta.getA());
+			}
+		}
+		return adjacentes;
+
+	}
+
+	public Set<Vertice> getAdjacente(Vertice v) {
+		Set<Vertice> adjacentes = new HashSet<Vertice>();
+
+		for (Aresta aresta : this.arestas) {
+			if (aresta.getA() == v) {
+				adjacentes.add(aresta.getB());
+			}
+		}
+		return adjacentes;
+	}
+
+	@Override
+	public boolean ehConexo() {
+		int cont = 1;
+		for (Vertice vertice1 : this.vertices) {
+			vertice1.setVisited(true);
+			this.queue.add(vertice1);
+			while (!this.queue.isEmpty()) {
+				vertice1 = this.queue.poll();
+				for (Vertice vertice2 : getAdjacentes(vertice1)) {
+					if (vertice2.isVisited() == false) {
+						vertice2.setVisited(true);
+						this.queue.add(vertice2);
+						cont++;
+					}
+				}
+			}
+			if (this.vertices.size() == cont) {
+				for (Vertice vertice : this.vertices) {
+					vertice.setVisited(false);
+				}
+				return true;
+			} else {
+				for (Vertice vertice : this.vertices) {
+					vertice.setVisited(false);
+				}
+				return false;
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public void buscaLargura() {
+		int cont = 0;
+		for (Vertice vertice1 : this.vertices) {
+			vertice1.setVisited(true);
+			this.queue.add(vertice1);
+			cont++;
+			System.out.println("Grafo: ");
+			while (!this.queue.isEmpty()) {
+				vertice1 = this.queue.poll();
+				System.out.print(vertice1.getNome());
+				for (Vertice vertice2 : getAdjacentes(vertice1)) {
+					if (vertice2.isVisited() == false) {
+						vertice2.setVisited(true);
+						this.queue.add(vertice2);
+						cont++;
+						System.out.print(", ");
+					}
+				}
+			}
+			if (this.vertices.size() == cont) {
+				System.out.println("\n");
+				break;
+			} else {
+				System.out.println("\n");
+			}
+		}
+		for (Vertice vertice : this.vertices) {
+			vertice.setVisited(false);
+		}
+	}
+
+	@Override
+	public void buscaProfundidade() {
+		int cont = 0;
+		for (Vertice vertice1 : this.vertices) {
+			vertice1.setVisited(true);
+			this.stack.add(vertice1);
+			System.out.println("Grafo: ");
+			while (!this.stack.isEmpty()) {
+				for (Vertice vertice2 : getAdjacentes(vertice1)) {
+					if (vertice2.isVisited() == false) {
+						vertice2.setVisited(true);
+						this.stack.add(vertice2);
+						vertice1 = vertice2;
+					}
+				}
+				if (this.stack.size() > 1) {
+					System.out.print(this.stack.pop().getNome() + ", ");
+					cont++;
+				} else {
+					System.out.print(this.stack.pop().getNome());
+					cont++;
+				}
+			}
+			if (this.vertices.size() == cont) {
+				System.out.println("\n");
+				break;
+			} else {
+				System.out.println("\n");
+			}
+		}
+		for (Vertice vertice : this.vertices) {
+			vertice.setVisited(false);
+		}
+	}
+
+	public void menorCaminho(Vertice inicio) {
+		ArrayList<ElementoMenorCaminho> lista = new ArrayList<>();
+		ArrayList<ElementoMenorCaminho> listaAux = new ArrayList<>();
+		Vertice atual;
+		boolean aux;
+		ElementoMenorCaminho elementoAux;
+		inicio.setVisited(true);
+		this.queue.add(inicio);
+		ElementoMenorCaminho elemento1 = new ElementoMenorCaminho(inicio.getNome(), 0, "-");
+		elemento1.setS(true);
+		lista.add(elemento1);
+		listaAux.add(elemento1);
+		while (!this.queue.isEmpty()) {
+			atual = this.queue.poll();
+			for (Vertice vertice : getAdjacente(atual)) {
+				if (!vertice.isVisited()) {
+					ElementoMenorCaminho elemento2 = new ElementoMenorCaminho(vertice.getNome(), atual.getNome());
+					aux = true;
+					for (ElementoMenorCaminho elementos : listaAux) {
+						if (elementos.getVertice().equals(elemento2.getPath())) {
+							aux = false;
+							for (Aresta aresta : this.arestas) {
+								if (aresta.getA().equals(atual) && aresta.getB().equals(vertice)
+										|| aresta.getA().equals(vertice) && aresta.getB().equals(atual)) {
+									elemento2.setDistancia(elementos.getDistancia() + aresta.getPeso());
+								}
+							}
+						}
+					}
+					if (aux) {
+						for (Aresta aresta : this.arestas) {
+							if (aresta.getA().equals(atual) && aresta.getB().equals(vertice)
+									|| aresta.getA().equals(vertice) && aresta.getB().equals(atual)) {
+								elemento2.setDistancia(aresta.getPeso());
+							}
+						}
+					}
+					listaAux.add(elemento2);
+				}
+			}
+			for (int i = 0; i < listaAux.size(); i++) {
+				for (int j = 0; j < listaAux.size(); j++) {
+					if (listaAux.get(i).getDistancia() < listaAux.get(j).getDistancia()) {
+						ElementoMenorCaminho elementoaux = listaAux.get(i);
+						listaAux.set(i, listaAux.get(j));
+						listaAux.set(j, elementoaux);
+					}
+				}
+			}
+			if (!listaAux.isEmpty()) {
+				for (int i = 0; i < listaAux.size(); i++) {
+					if (listaAux.get(i).isS() == false) {
+						elementoAux = listaAux.get(i);
+						listaAux.get(i).setS(true);
+						listaAux.remove(elementoAux);
+						lista.add(elementoAux);
+						for (Vertice vertice : this.vertices) {
+							if (vertice.getNome().equals(elementoAux.getVertice())) {
+								this.queue.add(vertice);
+								vertice.setVisited(true);
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
+		for (int i = 0; i < lista.size(); i++) {
+			for (int j = 0; j < lista.size(); j++) {
+				if (lista.get(i).getDistancia() < lista.get(j).getDistancia()) {
+					ElementoMenorCaminho elementoaux = lista.get(i);
+					lista.set(i, lista.get(j));
+					lista.set(j, elementoaux);
+				}
+			}
+		}
+		listaAux.clear();
+		int i = 0;
+		for (int j = 0; j < lista.size(); j++) {
+			boolean auxiliar = true;
+			if (listaAux.isEmpty()) {
+				listaAux.add(lista.get(j));
+			} else {
+				for (int c = 0; c < listaAux.size(); c++) {
+					if (listaAux.get(c).getVertice().equals(lista.get(j).getVertice())) {
+						auxiliar = false;
+						break;
+					}
+				}
+				if (auxiliar) {
+					listaAux.add(lista.get(j));
+					i++;
+					if (i == this.vertices.size()) {
+						break;
+					}
+				}
+			}
+		}
+		System.out.printf("%10s %8s %12s %7s", "Vertice", "S", "Distancia", "Path" + "\n");
+		for (ElementoMenorCaminho elementoMenorCaminho : listaAux) {
+			System.out.printf("%10s %8s %12s %7s", elementoMenorCaminho.getVertice(), elementoMenorCaminho.isS(),
+					elementoMenorCaminho.getDistancia(), elementoMenorCaminho.getPath() + "\n");
+		}
+	}
+
+	@Override
+	public String toString() {
+
+		String retorno = "";
+
+		for (Vertice v : vertices) {
+			retorno += v.toString() + "[ ";
+
+			Set<Vertice> adjacentes = this.getAdjacentes(v);
+
+			for (Vertice adj : adjacentes) {
+				retorno += adj.toString() + " ";
+			}
+
+			retorno += "]\n";
+
+		}
+
+		return retorno;
+	}
+
+}

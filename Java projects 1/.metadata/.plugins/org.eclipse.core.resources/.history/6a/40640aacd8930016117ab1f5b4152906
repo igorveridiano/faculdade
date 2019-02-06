@@ -1,0 +1,50 @@
+package Teste;
+
+import java.util.ArrayList;
+
+public class Menu {
+	
+	private ArrayList<Animal> ListaAnimal;
+	
+	public Menu(){
+		new ArrayList<Animal>();
+	}
+	
+	public boolean AdicionarAnimal(Animal animal){
+		if (this.ListaAnimal.size() == 0){
+			this.ListaAnimal.add(animal);
+			return = true;
+		} else {
+		boolean Animaisiguais = true;
+		for (Animal animal2 : this.ListaAnimal) {
+			if (animal2.getNome() != animal.getNome() && animal2.getEspecie() != animal.getEspecie()){
+				Animaisiguais = false;
+			}
+		}
+	    if (Animaisiguais){
+			System.out.println("Ja existe um animal com essa especie e nome na lista");
+			return true;
+		} else{
+			
+		}
+		}	
+	}
+	
+	
+	
+	
+
+	public ArrayList<Animal> getListaAnimal() {
+		return ListaAnimal;
+	}
+
+	public void setListaAnimal(ArrayList<Animal> listaAnimal) {
+		ListaAnimal = listaAnimal;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

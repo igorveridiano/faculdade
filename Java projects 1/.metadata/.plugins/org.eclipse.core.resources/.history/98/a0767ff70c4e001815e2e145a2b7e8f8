@@ -1,0 +1,61 @@
+package main;
+
+import graph.Aresta;
+import graph.Grafo;
+import graph.Vertice;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+
+        Set<Vertice> vertices = new HashSet<Vertice>();
+        Set<Aresta> arestas = new HashSet<Aresta>();
+
+        Vertice t = new Vertice("t");
+        Vertice u = new Vertice("u");
+        Vertice x = new Vertice("x");
+        Vertice v = new Vertice("v");
+        Vertice y = new Vertice("y");
+
+        Aresta aresta1 = new Aresta(t, u, 10);
+        Aresta aresta2 = new Aresta(t, x, 5);
+        Aresta aresta3 = new Aresta(u, v, 1);
+        Aresta aresta4 = new Aresta(u, x, 2);
+        Aresta aresta5 = new Aresta(x, u, 3);
+        Aresta aresta6 = new Aresta(x, v, 9);
+        Aresta aresta7 = new Aresta(x, y, 2);
+        Aresta aresta8 = new Aresta(v, y, 4);
+        Aresta aresta9 = new Aresta(y, v, 6);
+        Aresta aresta10 = new Aresta(y, t, 7);
+
+        vertices.add(t);
+        vertices.add(u);
+        vertices.add(x);
+        vertices.add(v);
+        vertices.add(y);
+
+        arestas.add(aresta1);
+        arestas.add(aresta2);
+        arestas.add(aresta3);
+        arestas.add(aresta4);
+        arestas.add(aresta5);
+        arestas.add(aresta6);
+        arestas.add(aresta7);
+        arestas.add(aresta8);
+        arestas.add(aresta9);
+        arestas.add(aresta10);
+
+        Grafo grafo = new Grafo(vertices, arestas);
+        
+        System.out.println(grafo.ehConexo());
+        System.out.println(grafo.toString());
+        grafo.buscaLargura();
+        grafo.buscaProfundidade();
+
+    }
+
+}

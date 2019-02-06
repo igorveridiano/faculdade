@@ -1,0 +1,11 @@
+1496342712084	Convert local variable 'leia' to field
+1496342714734	Convert local variable 'input' to field
+1496343476443	Encapsulate field 'nome'
+1496343481754	Encapsulate field 'cpf'
+1496343649601	Encapsulate field 'numeroNf'
+1496343653707	Encapsulate field 'cpfComprador'
+1496343657879	Encapsulate field 'valor'
+1496343661761	Encapsulate field 'ano'
+1496344760808	Encapsulate field 'valor'
+1496344764762	Encapsulate field 'ano'
+1496346707410	Encapsulate field 'pessoa'
